@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: mappy
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node .next/standalone/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BETTER_AUTH_URL
+        value: https://mappy-xa9x.onrender.com
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: BETTER_AUTH_SECRET
+        sync: false
