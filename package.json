@@ -2,12 +2,13 @@
   "name": "mappy",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:migrate": "tsx src/scripts/migrate.ts",
+    "db:migrate": "node src/scripts/migrate.js",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
@@ -17,7 +18,8 @@
     "drizzle-orm": "^0.45.1",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "tsx": "^4.21.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -29,7 +31,6 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
-    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
